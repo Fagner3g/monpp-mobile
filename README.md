@@ -1,35 +1,34 @@
 # Monpp :moneybag: :rocket:
 
-Monpp é um sistema para gerenciamento de finanças familiar, onde visa compartilhamento a distribuição de contas em grupos.
+Monpp is a system for family financial management, which aims to share the distribution of accounts in groups.
 
-## Começando
+## Getting Started
 
-Essas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Pré-requisitos
+### Prerequisites
 
-Deve possuír o ambiente preparado para rodar react-native.
-Instruções para configurar [aqui](https://react-native.rocketseat.dev/)
+It must have prepared the environment to react-native. Instructions for setting [here] (https://react-native.rocketseat.dev/)
 
-### Instalando
+### Installing
 
-Clone o repositório
+Clone the repository
 
 `git clone https://github.com/Fagneregomes/monpp.git`
 
-## Executando
+## Running
 
 `cd monpp`
 
-depois
+after
 
-`yarn ios` se estiver com IOs
+`yarn ios` if you are with IOs
 
-ou
+or
 
-`yarn android` se estiver no windows ou linux
+`yarn android` if you are on windows or linux
 
-## Construído com
+## Built with
 
 - :white_check_mark: [React Native](https://pt-br.reactjs.org/)
 - :white_check_mark: [Typescript](https://www.typescriptlang.org/)
@@ -38,10 +37,10 @@ ou
 - :white_check_mark: [Eslint](https://eslint.org/)
 - :white_check_mark: [Prettier](https://prettier.io/)
 
-## Autor
+## Author
 
-:computer: [Fagner](https://github.com/Fagneregomes)
+:computer: [Fagner Gomes](https://github.com/Fagneregomes)
 
-## Licença
+## License
 
-Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](LICENSE.md) para obter detalhes
+This project is licensed under the MIT License - see the LICENSE.md file for details
