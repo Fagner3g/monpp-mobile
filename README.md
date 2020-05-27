@@ -31,12 +31,12 @@ ou
 
 ## Construído com
 
-:white_check_mark: [React Native](https://pt-br.reactjs.org/)
-:white_check_mark: [Typescript](https://www.typescriptlang.org/)
-:white_check_mark: [Jest](https://jestjs.io/)
-:white_check_mark: [Styled Component](https://styled-components.com/)
-:white_check_mark: [Eslint](https://eslint.org/)
-:white_check_mark: [Prettier](https://prettier.io/)
+- :white_check_mark: [React Native](https://pt-br.reactjs.org/)
+- :white_check_mark: [Typescript](https://www.typescriptlang.org/)
+- :white_check_mark: [Jest](https://jestjs.io/)
+- :white_check_mark: [Styled Component](https://styled-components.com/)
+- :white_check_mark: [Eslint](https://eslint.org/)
+- :white_check_mark: [Prettier](https://prettier.io/)
 
 ## Autor
 
