@@ -40,7 +40,7 @@ ou
 
 ## Autor
 
-:computer: [Fagner](https://github.com/PurpleBooth)
+:computer: [Fagner](https://github.com/Fagneregomes)
 
 ## Licença
 
