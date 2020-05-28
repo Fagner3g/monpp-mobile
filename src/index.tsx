@@ -1,10 +1,6 @@
-import React from 'react';
-import {Text} from 'react-native';
+import React from 'react'
+import { Text } from 'react-native'
 
-interface IProps {}
+const App: React.FC<> = () => <Text>Olá mundo</Text>
 
-const App: React.FC<IProps> = () => {
-  return <Text>Olá mundo</Text>;
-};
-
-export default App;
+export default App
