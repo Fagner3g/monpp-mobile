@@ -1,6 +1,7 @@
 import React from 'react'
-import { Text } from 'react-native'
 
-const App: React.FC<> = () => <Text>Olá mundo</Text>
+import Button from '~/componentes/Atoms/Button'
+
+const App: React.FC = () => <Button />
 
 export default App
