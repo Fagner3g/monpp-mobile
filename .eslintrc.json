@@ -21,16 +21,27 @@
     "sourceType": "module"
   },
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+
   "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "prettier/prettier": "error",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "import/no-unresolved": 0,
     "no-unused-expressions": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": true,
+        "peerDependencies": true
+      }
+    ],
     "@typescript-eslint/explicit-function-return-type": [
       "error",
       {

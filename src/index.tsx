@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Button from '~/componentes/Atoms/Button'
+import Button from '~/componentes/atoms/Button'
 
-const App: React.FC = () => <Button />
+const App: React.FC = () => <Button>Enviar</Button>
 
 export default App
