@@ -1,6 +1,14 @@
 import React from 'react'
-import Button from '~/componentes/atoms/Button'
+import { ThemeProvider } from 'styled-components'
 
-const App: React.FC = () => <Button>Enviar</Button>
+import Home from '~/pages/Home'
+
+import { lightTheme, darkTheme } from './styles/themes'
+
+const App: React.FC = () => (
+  <ThemeProvider theme={lightTheme}>
+    <Home />
+  </ThemeProvider>
+)
 
 export default App
