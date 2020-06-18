@@ -8,10 +8,12 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "ios:clean": "rm -rf node_modules && rm -rf ios/Pods && rm -rf ios/Podfile.lock",
     "storybook": "start-storybook -p 7007",
     "prestorybook": "rnstl"
   },
   "dependencies": {
+    "polished": "^3.6.5",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-gesture-handler": "^1.6.1",

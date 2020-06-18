@@ -3,10 +3,10 @@ import { name as appName } from './app.json'
 
 console.disableYellowBox = true
 
-const STORYBOOK_START = false
+const STORYBOOK_START = true
 
 const App = STORYBOOK_START
   ? require('./storybook').default
-  : require('./src').default
+  : require('./src/App').default
 
 AppRegistry.registerComponent(appName, () => App)

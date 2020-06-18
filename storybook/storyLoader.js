@@ -5,10 +5,12 @@
 
 function loadStories() {
 	require('../src/componentes/Atoms/Button/Button.story');
+	require('../src/componentes/Atoms/Input/Input.story');
 }
 
 const stories = [
-	'../src/componentes/Atoms/Button/Button.story'
+	'../src/componentes/Atoms/Button/Button.story',
+	'../src/componentes/Atoms/Input/Input.story'
 ];
 
 module.exports = {

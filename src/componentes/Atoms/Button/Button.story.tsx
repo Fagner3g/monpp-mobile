@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react-native'
 
 import Button from './index'
 
-storiesOf('Atoms', module)
+storiesOf('Atoms/Button', module)
   .add('Default', () => (
     <Button onPress={() => console.log('un-favorited!')}>Enviar</Button>
   ))
