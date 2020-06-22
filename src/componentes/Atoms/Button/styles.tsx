@@ -3,13 +3,13 @@ import { RectButton } from 'react-native-gesture-handler'
 
 interface IContainer {
   readonly background?: string
-  readonly enabled: boolean
+  readonly enabled?: boolean
 }
 
 export const Container = styled(RectButton)<IContainer>`
-  width: 100%;
+  flex-direction: row;
   height: 60px;
-  background: ${props => props.background || '#798888'};
+  background: ${props => props.background || props.theme.colors.primary};
   border-radius: 10px;
   opacity: ${props => (props.enabled ? 1 : 0.7)};
 

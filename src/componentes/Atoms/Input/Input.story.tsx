@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
 import { ThemeProvider } from 'styled-components'
+import { Form } from '@unform/mobile'
 
 import { lightTheme } from '~/styles/themes'
 import Input from '.'
@@ -11,12 +12,14 @@ import Input from '.'
 storiesOf('Atoms/Input', module)
   .add('Default', () => (
     <ThemeProvider theme={lightTheme}>
-      <Input name="username" icon="mail" />
+      <Form onSubmit={() => {}}>
+        <Input name="username" icon="mail" />
+      </Form>
     </ThemeProvider>
   ))
   .add('Error', () => (
     <ThemeProvider theme={lightTheme}>
-      <Input name="username" icon="mail" isErrored />
+      <Input name="username" icon="mail" />
     </ThemeProvider>
   ))
 
@@ -31,6 +34,6 @@ storiesOf('Atoms/Input/Icon', module)
   ))
   .add('Error', () => (
     <ThemeProvider theme={lightTheme}>
-      <Input name="username" icon="mail" isErrored />
+      <Input name="username" icon="mail" />
     </ThemeProvider>
   ))
