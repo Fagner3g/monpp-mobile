@@ -9,9 +9,18 @@ interface InputProps extends TextInputProps {
   name: string
   icon?: string
   label?: string
+  type: 'underline' | 'rounded'
+  isErrored?: boolean
 }
 
-const Input: React.FC<InputProps> = ({ name, label, ...rest }) => {
+const Input: React.FC<InputProps> = ({
+  name,
+  label,
+  type,
+  placeholder,
+  isErrored,
+  ...rest
+}) => {
   const inputRef = useRef<any>(null)
   const { fieldName, registerField, defaultValue = '', error } = useField(name)
   const [isFocused, setIsFocused] = useState(false)
@@ -45,27 +54,36 @@ const Input: React.FC<InputProps> = ({ name, label, ...rest }) => {
     left: 0,
     top: animatedIsFocused.interpolate({
       inputRange: [0, 1],
-      outputRange: [35, 5],
+      outputRange: [23, 5],
     }),
     fontSize: animatedIsFocused.interpolate({
       inputRange: [0, 1],
-      outputRange: [20, 14],
+      outputRange: [20, 12],
     }),
     color: animatedIsFocused.interpolate({
       inputRange: [0, 1],
-      outputRange: [theme.colors.placeholder, theme.colors.text],
+      outputRange: !isErrored
+        ? [theme.colors.placeholder, theme.colors.text]
+        : [theme.colors.danger, theme.colors.danger],
     }),
   }
 
   return (
-    <Container isFocused={isFocused} isErrored={!!error} underline>
-      <Animated.Text style={styles}>{label}</Animated.Text>
+    <Container
+      isFocused={isFocused}
+      isErrored={!!error || isErrored}
+      type={type}
+    >
+      {type === 'underline' && (
+        <Animated.Text style={styles}>{label}</Animated.Text>
+      )}
       <TextInput
         ref={inputRef}
         defaultValue={defaultValue}
         selectionColor={theme.colors.primary}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
+        placeholder={type !== 'underline' ? placeholder : ''}
         onChangeText={value => {
           inputRef.current.value = value
         }}

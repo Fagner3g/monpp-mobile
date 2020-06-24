@@ -1,21 +1,20 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
-import { ThemeProvider } from 'styled-components'
 
-import { lightTheme } from '~/styles/themes'
+import { BoxStorybook } from '~/componentes/Atoms/BoxStorybook'
 
 import Button from './index'
 
 storiesOf('Atoms/Button', module)
   .add('Default', () => (
-    <ThemeProvider theme={lightTheme}>
+    <BoxStorybook>
       <Button onPress={() => console.log('un-favorited!')}>Enviar</Button>
-    </ThemeProvider>
+    </BoxStorybook>
   ))
   .add('Disabled', () => (
-    <ThemeProvider theme={lightTheme}>
+    <BoxStorybook>
       <Button enabled={false} onPress={() => console.log('favorited!')}>
         Enviar
       </Button>
-    </ThemeProvider>
+    </BoxStorybook>
   ))

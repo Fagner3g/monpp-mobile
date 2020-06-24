@@ -10,7 +10,7 @@ export const Container = styled(RectButton)<IContainer>`
   flex-direction: row;
   height: 60px;
   background: ${props => props.background || props.theme.colors.primary};
-  border-radius: 10px;
+  border-radius: 30px;
   opacity: ${props => (props.enabled ? 1 : 0.7)};
 
   justify-content: center;

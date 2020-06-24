@@ -1,39 +1,34 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
-import { ThemeProvider } from 'styled-components'
-import { Form } from '@unform/mobile'
 
-import { lightTheme } from '~/styles/themes'
+import { BoxStorybook } from '~/componentes/Atoms/BoxStorybook'
 import Input from '.'
 
 /**
  * inputs without icons
  */
 storiesOf('Atoms/Input', module)
-  .add('Default', () => (
-    <ThemeProvider theme={lightTheme}>
-      <Form onSubmit={e => e}>
-        <Input name="username" label="UserName" icon="mail" />
-      </Form>
-    </ThemeProvider>
+  .add('Underline', () => (
+    <BoxStorybook>
+      <Input name="Default" label="Default" type="underline" />
+      <Input name="Error" label="isErrored" type="underline" isErrored />
+    </BoxStorybook>
   ))
-  .add('Error', () => (
-    <ThemeProvider theme={lightTheme}>
-      <Input name="username" icon="mail" />
-    </ThemeProvider>
-  ))
+  .add('Rounded', () => (
+    <BoxStorybook>
+      <Input
+        name="username"
+        label="UserName"
+        placeholder="Input default"
+        type="rounded"
+      />
 
-/**
- * Icon inputs
- */
-storiesOf('Atoms/Input/Icon', module)
-  .add('Default', () => (
-    <ThemeProvider theme={lightTheme}>
-      <Input name="username" icon="mail" />
-    </ThemeProvider>
-  ))
-  .add('Error', () => (
-    <ThemeProvider theme={lightTheme}>
-      <Input name="username" icon="mail" />
-    </ThemeProvider>
+      <Input
+        name="username"
+        label="UserName"
+        placeholder="Input com erro"
+        type="rounded"
+        isErrored
+      />
+    </BoxStorybook>
   ))
