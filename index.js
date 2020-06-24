@@ -4,7 +4,7 @@ import { name as appName } from './app.json'
 import 'react-native-gesture-handler'
 console.disableYellowBox = true
 
-const STORYBOOK_START = true
+const STORYBOOK_START = false
 
 const App = STORYBOOK_START
   ? require('./storybook').default

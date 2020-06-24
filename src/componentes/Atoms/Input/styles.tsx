@@ -35,7 +35,7 @@ export const Container = styled.View<ContainerProps>`
 
 export const TextInput = styled.TextInput`
   flex: 1;
-  color: ${props => props.theme.colors.placeholder};
+  color: ${props => props.theme.colors.text};
   font-size: 18px;
   padding: 20px 0 1px 0;
 `

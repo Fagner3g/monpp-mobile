@@ -1,5 +1,6 @@
 // theme.ts
 import { DefaultTheme } from 'styled-components/native'
+import { lighten, shade } from 'polished'
 
 declare module 'styled-components/native' {
   export interface DefaultTheme {
@@ -7,6 +8,7 @@ declare module 'styled-components/native' {
       primary: string
       secundary: string
 
+      text: string
       placeholder: string
 
       danger: string
@@ -20,7 +22,8 @@ export const lightTheme: DefaultTheme = {
     primary: '#11B5E4',
     secundary: '#7169b6',
 
-    placeholder: '#333',
+    text: shade(0.6, '#11B5E4'),
+    placeholder: lighten(0.4, '#313131'),
 
     warning: '#F77F00',
     danger: '#D62828',
@@ -32,7 +35,8 @@ export const darkTheme: DefaultTheme = {
     primary: '#333',
     secundary: '#87b899',
 
-    placeholder: '#f5f5f5',
+    text: '#313131',
+    placeholder: '#DDD',
 
     warning: '#F77F00',
     danger: '#D62828',

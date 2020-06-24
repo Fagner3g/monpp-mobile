@@ -22,8 +22,8 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Form ref={formRef} onSubmit={handleSubmit}>
-        <Input name="username" />
-        <Input name="password" />
+        <Input name="username" label="Usuário" />
+        <Input name="password" label="Senha" />
         <Button onPress={() => formRef.current?.submitForm()}>Enviar</Button>
       </Form>
     </Container>

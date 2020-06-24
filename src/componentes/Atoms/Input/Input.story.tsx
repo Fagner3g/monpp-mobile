@@ -12,8 +12,8 @@ import Input from '.'
 storiesOf('Atoms/Input', module)
   .add('Default', () => (
     <ThemeProvider theme={lightTheme}>
-      <Form onSubmit={() => {}}>
-        <Input name="username" icon="mail" />
+      <Form onSubmit={e => e}>
+        <Input name="username" label="UserName" icon="mail" />
       </Form>
     </ThemeProvider>
   ))
