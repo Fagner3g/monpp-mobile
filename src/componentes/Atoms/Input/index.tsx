@@ -9,14 +9,14 @@ interface InputProps extends TextInputProps {
   name: string
   icon?: string
   label?: string
-  type: 'underline' | 'rounded'
+  type?: 'underline' | 'rounded'
   isErrored?: boolean
 }
 
 const Input: React.FC<InputProps> = ({
   name,
   label,
-  type,
+  type = 'rounded',
   placeholder,
   isErrored,
   ...rest

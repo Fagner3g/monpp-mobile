@@ -13,6 +13,8 @@ declare module 'styled-components/native' {
 
       danger: string
       warning: string
+
+      border: string
     }
   }
 }
@@ -22,11 +24,13 @@ export const lightTheme: DefaultTheme = {
     primary: '#11B5E4',
     secundary: '#7169b6',
 
-    text: shade(0.6, '#11B5E4'),
+    text: '#323232',
     placeholder: lighten(0.4, '#313131'),
 
     warning: '#F77F00',
     danger: '#D62828',
+
+    border: lighten(0.6, '#313131'),
   },
 }
 
@@ -40,5 +44,7 @@ export const darkTheme: DefaultTheme = {
 
     warning: '#F77F00',
     danger: '#D62828',
+
+    border: lighten(0.6, '#313131'),
   },
 }

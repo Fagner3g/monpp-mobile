@@ -29,7 +29,7 @@ export const Container = styled.View<ContainerProps>`
         padding-left: 30px;
         border-width: 2px;
         border-radius: 50px;
-        border-color: ${() => shade(0.4, props.theme.colors.primary)};
+        border-color: ${() => props.theme.colors.border};
       `}
     ${props =>
       props.isErrored &&
@@ -39,7 +39,7 @@ export const Container = styled.View<ContainerProps>`
     ${props =>
       props.isFocused &&
       css`
-        border-color: ${() => shade(0.8, props.theme.colors.primary)};
+        border-color: ${() => shade(0.2, props.theme.colors.primary)};
       `};
 `
 
