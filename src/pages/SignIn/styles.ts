@@ -1,11 +1,15 @@
 import styled from 'styled-components/native'
-import { Platform } from 'react-native'
+import { Form as FromBase } from '@unform/mobile'
 
-export const Container = styled.View`
+export const Container = styled.ImageBackground`
   flex: 1;
-  align-items: center;
+`
+
+export const Form = styled(FromBase)`
+  flex: 1;
   justify-content: center;
-  padding: 0 30px ${Platform.OS === 'android' ? 150 : 40}px;
+  align-content: center;
+  margin: 0 10px;
 `
 
 export const Title = styled.Text`
