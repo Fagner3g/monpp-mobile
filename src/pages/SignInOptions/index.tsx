@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Button from '~/componentes/Atoms/Button'
+import Button from '~/components/Atoms/Button'
 
 import BackgroundImg from '~/assets/image/Splash.png'
 import {

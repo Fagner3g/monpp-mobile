@@ -1,13 +1,14 @@
 import React from 'react'
-import { RectButtonProperties } from 'react-native-gesture-handler'
+import { TouchableOpacity } from 'react-native'
 
 import { Container, ButtonText } from './styles'
 
-interface ButtonProps extends RectButtonProperties {
+interface ButtonProps extends TouchableOpacity {
   children: string
   background?: string
   color?: string
   medium?: boolean
+  enabled?: boolean
 }
 
 const Button: React.FC<ButtonProps> = ({

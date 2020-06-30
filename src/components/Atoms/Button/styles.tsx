@@ -1,14 +1,13 @@
 import styled, { css } from 'styled-components/native'
-import { RectButton } from 'react-native-gesture-handler'
 import { shade } from 'polished'
 
 interface IContainer {
-  readonly background?: string
-  readonly enabled?: boolean
-  readonly medium?: boolean
+  background?: string
+  enabled?: boolean
+  medium?: boolean
 }
 
-export const Container = styled(RectButton)<IContainer>`
+export const Container = styled.TouchableOpacity<IContainer>`
   flex-direction: row;
   height: 60px;
   background: ${props =>
