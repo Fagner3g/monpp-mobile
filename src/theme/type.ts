@@ -1,16 +1,24 @@
+interface IColors {
+  primary: string
+  secundary: string
+
+  text: string
+  placeholder: string
+
+  danger: string
+  warning: string
+
+  border: string
+
+  background: string
+}
+
 export interface IStyledTheme {
-  colors: {
-    primary: string
-    secundary: string
+  colors: IColors
+}
 
-    text: string
-    placeholder: string
-
-    danger: string
-    warning: string
-
-    border: string
-
-    background: string
+declare module 'styled-components/native' {
+  export interface DefaultTheme {
+    colors: IColors
   }
 }

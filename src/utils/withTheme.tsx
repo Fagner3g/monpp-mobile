@@ -1,8 +1,8 @@
 import React from 'react'
 import { boolean, radios } from '@storybook/addon-knobs'
-import { css } from 'styled-components'
+import styled, { ThemeProvider, css } from 'styled-components/native'
 
-import styled, { IStyledTheme, ThemeProvider, themes } from '~/theme'
+import { IStyledTheme, themes } from '~/theme'
 
 const options = {
   theme: {
