@@ -2,12 +2,12 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { StatusBar } from 'react-native'
 
-import theme from '~/utils/switchTheme'
+import { lightTheme } from '~/theme'
 import SignInOptions from '~/pages/SignInOptions'
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={lightTheme}>
       <StatusBar
         translucent
         backgroundColor="transparent"
