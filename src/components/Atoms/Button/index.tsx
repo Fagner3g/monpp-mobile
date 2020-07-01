@@ -1,31 +1,26 @@
 import React from 'react'
-import { TouchableOpacity } from 'react-native'
+import { TouchableOpacityProps } from 'react-native'
 
 import { Container, ButtonText } from './styles'
 
-interface ButtonProps extends TouchableOpacity {
-  children: string
+interface ButtonProps extends TouchableOpacityProps {
+  children: React.ReactNode
   background?: string
   color?: string
-  medium?: boolean
-  enabled?: boolean
+  disabled?: boolean
+  type?: 'default' | 'solid' | 'outline'
+  size?: 'full' | 'medium'
 }
 
 const Button: React.FC<ButtonProps> = ({
   children,
-  enabled = true,
+  disabled,
   background,
-  medium,
   color,
   ...rest
 }) => (
-  <Container
-    {...rest}
-    enabled={enabled}
-    background={background}
-    medium={medium}
-  >
-    <ButtonText color={color}>{children}</ButtonText>
+  <Container {...rest} disabled={disabled} background={background}>
+    <ButtonText color={color || background}>{children}</ButtonText>
   </Container>
 )
 

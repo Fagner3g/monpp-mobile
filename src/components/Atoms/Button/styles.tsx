@@ -3,28 +3,43 @@ import { shade } from 'polished'
 
 interface IContainer {
   background?: string
-  enabled?: boolean
-  medium?: boolean
+  disabled?: boolean
+  type?: 'default' | 'solid' | 'outline'
+  size?: 'full' | 'medium'
 }
 
 export const Container = styled.TouchableOpacity<IContainer>`
   flex-direction: row;
   height: 60px;
-  background: ${props =>
-    props.background || shade(0.3, props.theme.colors.primary)};
+
   border-radius: 30px;
-  opacity: ${props => (props.enabled ? 1 : 0.7)};
+  opacity: ${props => (!props.disabled ? 1 : 0.7)};
   justify-content: center;
   align-items: center;
 
   ${props =>
-    props.medium &&
+    props.type === 'solid' &&
+    css`
+      background: ${() =>
+        props.background || shade(0.3, props.theme.colors.primary)};
+    `}
+
+  ${props =>
+    props.type === 'outline' &&
+    css`
+      border-width: 2px;
+      border-color: ${() =>
+        props.background || shade(0.3, props.theme.colors.primary)};
+    `}
+
+  ${props =>
+    props.size === 'medium' &&
     css`
       width: 45%;
     `}
 `
 
 export const ButtonText = styled.Text<{ color?: string }>`
-  color: ${props => props.color || props.theme.colors.text};
+  color: ${props => props.color};
   font-size: 18px;
 `
