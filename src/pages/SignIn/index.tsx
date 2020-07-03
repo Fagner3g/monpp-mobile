@@ -8,11 +8,10 @@ import {
   Platform,
 } from 'react-native'
 
-import Button from '~/componentes/Atoms/Button'
-import Input from '~/componentes/Atoms/Input'
+import Button from '~/components/Atoms/Button'
+import Input from '~/components/Atoms/Input'
 
-import BackgroundImg from '~/assets/image/Splash.png'
-import { Container, Form } from './styles'
+import { Form, Rocket, Logo, Background } from './styles'
 
 interface FormData {
   username: string
@@ -27,12 +26,15 @@ const Home: React.FC = () => {
   }
 
   return (
-    <Container source={BackgroundImg}>
+    <Background>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <KeyboardAvoidingView
-          behavior={Platform.OS === 'ios' && 'padding'}
+          behavior={(Platform.OS === 'ios' && 'padding') || 'height'}
           style={{ flex: 1 }}
+          keyboardVerticalOffset={-100}
         >
+          <Rocket />
+          <Logo />
           <Form ref={formRef} onSubmit={handleSubmit}>
             <Input name="username" label="Usuário" placeholder="Usuário" />
             <Input name="password" label="Senha" placeholder="Senha" />
@@ -42,7 +44,7 @@ const Home: React.FC = () => {
           </Form>
         </KeyboardAvoidingView>
       </TouchableWithoutFeedback>
-    </Container>
+    </Background>
   )
 }
 

@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components'
 import { StatusBar } from 'react-native'
 
 import { lightTheme } from '~/theme'
-import SignInOptions from '~/pages/SignInOptions'
+import SignIn from '~/pages/SignIn'
 
 const App: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const App: React.FC = () => {
         backgroundColor="transparent"
         barStyle="light-content"
       />
-      <SignInOptions />
+      <SignIn />
     </ThemeProvider>
   )
 }

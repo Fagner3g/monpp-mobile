@@ -28,6 +28,6 @@
     "target": "esnext",
     "noImplicitAny": false
   },
-  "include": ["src", "theme"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist", "example"]
 }

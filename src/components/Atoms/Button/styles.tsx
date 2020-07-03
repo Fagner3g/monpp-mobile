@@ -40,6 +40,6 @@ export const Container = styled.TouchableOpacity<IContainer>`
 `
 
 export const ButtonText = styled.Text<{ color?: string }>`
-  color: ${props => props.color};
+  color: ${props => props.color || props.theme.colors.text};
   font-size: 18px;
 `

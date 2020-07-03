@@ -1,19 +1,33 @@
 import styled from 'styled-components/native'
 import { Form as FromBase } from '@unform/mobile'
+import { Animated } from 'react-native'
 
-export const Container = styled.ImageBackground`
-  flex: 1;
-`
+import bgRocket from '~/assets/image/bgRocket.png'
+import bgLogo from '~/assets/image/bgLogo.png'
+import bg from '~/assets/image/Background.png'
 
 export const Form = styled(FromBase)`
   flex: 1;
   justify-content: center;
-  align-content: center;
   margin: 0 10px;
 `
 
-export const Title = styled.Text`
-  color: #f4ede8;
-  font-size: 20px;
-  margin: 64px 0 24px;
+export const Rocket = styled(Animated.Image).attrs({
+  source: bgRocket,
+})`
+  position: absolute;
+  right: 0;
+`
+
+export const Logo = styled(Animated.Image).attrs({
+  source: bgLogo,
+})`
+  position: absolute;
+  left: 0;
+`
+
+export const Background = styled.ImageBackground.attrs({
+  source: bg,
+})`
+  flex: 1;
 `
