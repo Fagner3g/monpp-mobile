@@ -15,10 +15,11 @@ const options = {
   },
 }
 
-const Background = styled.View<{ padding?: boolean }>`
+const Background = styled.View<{ padding?: boolean; dark: boolean }>`
   background-color: ${props => props.theme.colors.background};
   height: 100vh;
   flex: 1;
+  background: ${props => (props.dark ? '#123' : '#FAFBFA')};
 
   ${props =>
     props.padding &&
@@ -35,7 +36,10 @@ export const StorybookHoc: React.FC<{ children: React.ReactNode }> = ({
 
   return (
     <ThemeProvider theme={theme}>
-      <Background padding={boolean('Pedding', !!options.padding)}>
+      <Background
+        dark={color === 'dark'}
+        padding={boolean('Pedding', !!options.padding)}
+      >
         {children}
       </Background>
     </ThemeProvider>

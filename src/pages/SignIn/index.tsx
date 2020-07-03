@@ -9,9 +9,8 @@ import {
 } from 'react-native'
 
 import Button from '~/components/Atoms/Button'
-import Input from '~/components/Atoms/Input'
 
-import { Form, Rocket, Logo, Background } from './styles'
+import { Form, Rocket, Logo, Background, Input } from './styles'
 
 interface FormData {
   username: string
@@ -36,9 +35,20 @@ const Home: React.FC = () => {
           <Rocket />
           <Logo />
           <Form ref={formRef} onSubmit={handleSubmit}>
-            <Input name="username" label="Usuário" placeholder="Usuário" />
-            <Input name="password" label="Senha" placeholder="Senha" />
-            <Button onPress={() => formRef.current?.submitForm()}>
+            <Input
+              name="username"
+              label="Usuário"
+              placeholder="Usuário"
+              type="rounded"
+            />
+            <Input
+              name="password"
+              label="Senha"
+              placeholder="Senha"
+              type="rounded"
+              secureTextEntry
+            />
+            <Button type="solid" onPress={() => formRef.current?.submitForm()}>
               Enviar
             </Button>
           </Form>

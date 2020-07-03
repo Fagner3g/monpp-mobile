@@ -4,7 +4,7 @@ import { shade } from 'polished'
 interface IContainer {
   background?: string
   disabled?: boolean
-  type?: 'default' | 'solid' | 'outline'
+  type?: 'solid' | 'outline'
   size?: 'full' | 'medium'
 }
 

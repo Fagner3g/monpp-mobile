@@ -9,22 +9,23 @@ interface InputProps extends TextInputProps {
   name: string
   icon?: string
   label?: string
-  type?: 'underline' | 'rounded'
+  type?: 'underline' | 'rounded' | undefined
   isErrored?: boolean
 }
 
 const Input: React.FC<InputProps> = ({
   name,
   label,
-  type = 'rounded',
+  type,
   placeholder,
   isErrored,
+  style,
   ...rest
 }) => {
   const inputRef = useRef<any>(null)
   const { fieldName, registerField, defaultValue = '', error } = useField(name)
   const [isFocused, setIsFocused] = useState(false)
-  const animatedIsFocused = new Animated.Value(1)
+  const [animatedIsFocused] = useState(new Animated.Value(1))
 
   const theme = useTheme()
 
@@ -73,14 +74,16 @@ const Input: React.FC<InputProps> = ({
       isFocused={isFocused}
       isErrored={!!error || isErrored}
       type={type}
+      style={style}
     >
       {type === 'underline' && (
         <Animated.Text style={styles}>{label}</Animated.Text>
       )}
       <TextInput
+        type={type}
         ref={inputRef}
         defaultValue={defaultValue}
-        selectionColor={theme.colors.primary}
+        selectionColor={theme.colors.secundary}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         placeholder={type !== 'underline' ? placeholder : ''}

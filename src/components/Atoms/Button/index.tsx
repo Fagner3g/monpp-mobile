@@ -8,7 +8,7 @@ interface ButtonProps extends TouchableOpacityProps {
   background?: string
   color?: string
   disabled?: boolean
-  type?: 'default' | 'solid' | 'outline'
+  type?: 'solid' | 'outline' | undefined
   size?: 'full' | 'medium'
 }
 

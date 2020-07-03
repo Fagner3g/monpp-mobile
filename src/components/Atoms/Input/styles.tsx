@@ -1,24 +1,21 @@
 import styled, { css } from 'styled-components/native'
-import { shade } from 'polished'
+import { shade, transparentize } from 'polished'
 
 interface ContainerProps {
   isFocused?: boolean
   isErrored?: boolean
-  type: 'underline' | 'rounded'
+  type: 'underline' | 'rounded' | undefined
 }
 
 export const Container = styled.View<ContainerProps>`
-  width: 100%;
   height: 50px;
   flex-direction: row;
   align-items: flex-end;
-  margin-top: 5px;
 
     ${props =>
       props.type === 'underline' &&
       css`
         padding: 0 10px;
-        margin-bottom: 8px;
         border-bottom-width: 2px;
         border-color: ${() => shade(0.4, props.theme.colors.primary)};
       `}
@@ -29,8 +26,11 @@ export const Container = styled.View<ContainerProps>`
         padding-left: 30px;
         border-width: 2px;
         border-radius: 50px;
-        border-color: ${() => props.theme.colors.border};
+        border-color: ${() =>
+          transparentize(0.7, props.theme.colors.placeholder)};
+        background: ${() => transparentize(0.4, props.theme.colors.primary)};
       `}
+
     ${props =>
       props.isErrored &&
       css`
@@ -43,9 +43,15 @@ export const Container = styled.View<ContainerProps>`
       `};
 `
 
-export const TextInput = styled.TextInput`
+export const TextInput = styled.TextInput<ContainerProps>`
   flex: 1;
   color: ${props => props.theme.colors.text};
   font-size: 16px;
-  align-items: center;
+  height: 50px;
+
+  ${props =>
+    props.type === 'underline' &&
+    css`
+      padding-top: 28px;
+    `}
 `

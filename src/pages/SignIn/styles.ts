@@ -2,6 +2,8 @@ import styled from 'styled-components/native'
 import { Form as FromBase } from '@unform/mobile'
 import { Animated } from 'react-native'
 
+import InputBase from '~/components/Atoms/Input'
+
 import bgRocket from '~/assets/image/bgRocket.png'
 import bgLogo from '~/assets/image/bgLogo.png'
 import bg from '~/assets/image/Background.png'
@@ -10,6 +12,10 @@ export const Form = styled(FromBase)`
   flex: 1;
   justify-content: center;
   margin: 0 10px;
+`
+
+export const Input = styled(InputBase)`
+  margin-bottom: 20px;
 `
 
 export const Rocket = styled(Animated.Image).attrs({

@@ -1,4 +1,4 @@
-import { lighten } from 'polished'
+import { lighten, shade } from 'polished'
 import { IStyledTheme } from '~/theme'
 
 export const lightTheme: IStyledTheme = {
@@ -6,8 +6,8 @@ export const lightTheme: IStyledTheme = {
     primary: '#68D3C4',
     secundary: '#7169b6',
 
-    text: '#5C7266',
-    placeholder: lighten(0.4, '#FAFBFA'),
+    text: shade(0.8, '#68D3C4'),
+    placeholder: lighten(0.3, '#68D3C4'),
 
     warning: '#F77F00',
     danger: '#D62828',
