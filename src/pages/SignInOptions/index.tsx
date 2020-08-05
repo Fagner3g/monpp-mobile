@@ -2,7 +2,7 @@ import React from 'react'
 
 import Button from '~/components/Atoms/Button'
 
-import BackgroundImg from '~/assets/image/Splash.png'
+import BackgroundImg from '~/assets/image/bgRocket.png'
 import {
   Background,
   Container,
@@ -12,15 +12,15 @@ import {
   LineOr,
 } from './styles'
 
-const Home: React.FC = () => {
+const SignInOptions: React.FC = () => {
   return (
     <Background source={BackgroundImg}>
       <Container>
         <SocialContainer>
-          <Button onPress={() => {}} medium background="#3B5998" color="#FFF">
+          <Button onPress={() => {}} color="#3B5998" textColor="#FFF">
             Facebook
           </Button>
-          <Button onPress={() => {}} medium background="#DB4437" color="#FFF">
+          <Button onPress={() => {}} color="#DB4437" textColor="#FFF">
             Google+
           </Button>
         </SocialContainer>
@@ -37,4 +37,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default SignInOptions

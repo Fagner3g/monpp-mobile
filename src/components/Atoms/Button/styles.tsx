@@ -10,7 +10,7 @@ interface IContainer {
 
 export const Container = styled.TouchableOpacity<IContainer>`
   flex-direction: row;
-  height: 60px;
+  height: 50px;
 
   border-radius: 30px;
   opacity: ${props => (!props.disabled ? 1 : 0.7)};

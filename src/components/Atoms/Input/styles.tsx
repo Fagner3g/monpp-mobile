@@ -28,7 +28,7 @@ export const Container = styled.View<ContainerProps>`
         border-radius: 50px;
         border-color: ${() =>
           transparentize(0.7, props.theme.colors.placeholder)};
-        background: ${() => transparentize(0.4, props.theme.colors.primary)};
+        background: ${() => transparentize(0.3, props.theme.colors.primary)};
       `}
 
     ${props =>
@@ -39,7 +39,7 @@ export const Container = styled.View<ContainerProps>`
     ${props =>
       props.isFocused &&
       css`
-        border-color: ${() => shade(0.2, props.theme.colors.primary)};
+        border-color: ${() => transparentize(0.5, '#FFF')};
       `};
 `
 

@@ -5,8 +5,8 @@ import { Container, ButtonText } from './styles'
 
 interface ButtonProps extends TouchableOpacityProps {
   children: React.ReactNode
-  background?: string
   color?: string
+  textColor?: string
   disabled?: boolean
   type?: 'solid' | 'outline' | undefined
   size?: 'full' | 'medium'
@@ -15,12 +15,12 @@ interface ButtonProps extends TouchableOpacityProps {
 const Button: React.FC<ButtonProps> = ({
   children,
   disabled,
-  background,
   color,
+  textColor,
   ...rest
 }) => (
-  <Container {...rest} disabled={disabled} background={background}>
-    <ButtonText color={color || background}>{children}</ButtonText>
+  <Container {...rest} disabled={disabled} background={color}>
+    <ButtonText color={textColor}>{children}</ButtonText>
   </Container>
 )
 

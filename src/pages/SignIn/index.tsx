@@ -10,7 +10,15 @@ import {
 
 import Button from '~/components/Atoms/Button'
 
-import { Form, Rocket, Logo, Background, Input } from './styles'
+import {
+  Form,
+  Rocket,
+  Logo,
+  Background,
+  Input,
+  ContainerSocial,
+  ContainerHelp,
+} from './styles'
 
 interface FormData {
   username: string
@@ -40,6 +48,7 @@ const Home: React.FC = () => {
               label="Usuário"
               placeholder="Usuário"
               type="rounded"
+              autoCompleteType="off"
             />
             <Input
               name="password"
@@ -48,9 +57,34 @@ const Home: React.FC = () => {
               type="rounded"
               secureTextEntry
             />
-            <Button type="solid" onPress={() => formRef.current?.submitForm()}>
-              Enviar
+            <Button
+              type="outline"
+              onPress={() => formRef.current?.submitForm()}
+            >
+              Entrar
             </Button>
+            <ContainerSocial>
+              <Button
+                type="solid"
+                size="medium"
+                textColor="#FAFAFA"
+                color="#3b5998"
+              >
+                Facebook
+              </Button>
+              <Button
+                type="solid"
+                size="medium"
+                textColor="#FAFAFA"
+                color="#DB4437"
+              >
+                Google+
+              </Button>
+            </ContainerSocial>
+            <ContainerHelp>
+              <Button>Esqueci a senha</Button>
+              <Button>Criar conta</Button>
+            </ContainerHelp>
           </Form>
         </KeyboardAvoidingView>
       </TouchableWithoutFeedback>
