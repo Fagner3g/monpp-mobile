@@ -3,12 +3,12 @@ import { Text } from 'react-native';
 
 import { Container } from './styles';
 
-const SignIn: React.FC = () => {
+const SignUp: React.FC = () => {
   return (
     <Container>
-      <Text>SignIn</Text>
+      <Text>SignUp</Text>
     </Container>
   );
 };
 
-export default SignIn;
+export default SignUp;
