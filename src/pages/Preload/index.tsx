@@ -15,11 +15,13 @@ const Preload: React.FC = () => {
       if (token !== null) {
         // Validar o token
       } else {
-        navigation.navigate('SignIn');
+        navigation.reset({ routes: [{ name: 'SignIn' }] });
       }
     };
 
-    checkToken();
+    setTimeout(() => {
+      checkToken();
+    }, 3000);
   }, []);
 
   return (
