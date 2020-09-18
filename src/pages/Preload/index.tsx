@@ -15,7 +15,7 @@ const Preload: React.FC = () => {
       if (token !== null) {
         // Validar o token
       } else {
-        navigation.reset({ routes: [{ name: 'SignIn' }] });
+        navigation.reset({ routes: [{ name: 'PreSignIn' }] });
       }
     };
 
