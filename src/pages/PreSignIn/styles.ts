@@ -46,5 +46,5 @@ export const SocialIconsArea = styled.TouchableOpacity`
 export const CreateAccountText = styled.Text`
   color: ${({ theme }) => theme.colors.text};
   font-size: 18px;
-  font-family: 'Gilroy-Light';
+  font-family: ${({ theme }) => theme.fonts.QuicksandRegular};
 `;

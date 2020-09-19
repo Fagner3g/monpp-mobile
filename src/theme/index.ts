@@ -15,6 +15,12 @@ declare module 'styled-components/native' {
 
       background: string;
     };
+
+    fonts: {
+      QuicksandRegular: string;
+      QuicksandSemiBold: string;
+      QuicksandBold: string;
+    };
   }
 }
 
@@ -30,6 +36,12 @@ export const lightTheme: DefaultTheme = {
 
     background: '#FFF',
   },
+
+  fonts: {
+    QuicksandRegular: 'Quicksand-Regular',
+    QuicksandSemiBold: 'Quicksand-SemiBold',
+    QuicksandBold: 'Quicksand-Bold',
+  },
 };
 
 export const darkTheme: DefaultTheme = {
@@ -43,5 +55,11 @@ export const darkTheme: DefaultTheme = {
     buttonText: '#1F1F1F',
 
     background: '#1F1F1F',
+  },
+
+  fonts: {
+    QuicksandRegular: lightTheme.fonts.QuicksandRegular,
+    QuicksandSemiBold: lightTheme.fonts.QuicksandSemiBold,
+    QuicksandBold: lightTheme.fonts.QuicksandBold,
   },
 };
