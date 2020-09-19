@@ -47,7 +47,7 @@ const PreSignIn: React.FC = () => {
             iconColor={theme.colors.primary}
           />
           <Button
-            onPress={() => navigatin.navigate('SignUp')}
+            onPress={() => navigatin.navigate('SignIn')}
             text="Login"
             iconRight="login"
             iconColor="#FFF"

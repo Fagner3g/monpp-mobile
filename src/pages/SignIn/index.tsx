@@ -1,14 +1,55 @@
 import React from 'react';
-import { Text } from 'react-native';
 
-import { Container } from './styles';
+import { transparentize } from 'polished';
+import { useTheme } from 'styled-components';
+import IconMaterial from 'react-native-vector-icons/MaterialIcons';
+import { useNavigation } from '@react-navigation/native';
 
-const SignIn: React.FC = () => {
+import {
+  Container,
+  Logo,
+  LogoArea,
+  LoginArea,
+  Button,
+  SocialArea,
+  SocialText,
+  ButtonArea,
+  SocialIconsArea,
+  CreateAccountText,
+} from './styles';
+
+const PreSignIn: React.FC = () => {
+  const theme = useTheme();
+  const navigatin = useNavigation();
+
+  function handleLogin() {
+    alert('Login');
+  }
+
   return (
     <Container>
-      <Text>SignIn</Text>
+      <LogoArea>
+        <Logo source={require('../../assets/image/nuvem.png')} />
+      </LogoArea>
+
+      <LoginArea>
+        <ButtonArea>
+          <Button
+            color={theme.colors.primary}
+            onPress={handleLogin}
+            text="Smart Id"
+            textColor={theme.colors.primary}
+            iconLeft="fingerprint"
+            iconColor={theme.colors.primary}
+          />
+        </ButtonArea>
+
+        <SocialArea>
+          <SocialText>Use Social Login</SocialText>
+        </SocialArea>
+      </LoginArea>
     </Container>
   );
 };
 
-export default SignIn;
+export default PreSignIn;
