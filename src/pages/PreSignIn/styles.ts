@@ -1,6 +1,8 @@
 import styled from 'styled-components/native';
 import ButtonBase from '~/components/Button';
 
+import Text from '~/components/Text';
+
 export const Container = styled.View`
   flex: 1;
   background-color: ${({ theme }) => theme.colors.background};
@@ -33,9 +35,7 @@ export const SocialArea = styled.View`
   margin-top: 40px;
 `;
 
-export const SocialText = styled.Text`
-  color: ${({ theme }) => theme.colors.text};
-`;
+export const SocialText = styled(Text)``;
 
 export const SocialIconsArea = styled.TouchableOpacity`
   flex-direction: row;
@@ -43,8 +43,4 @@ export const SocialIconsArea = styled.TouchableOpacity`
   padding: 10px;
 `;
 
-export const CreateAccountText = styled.Text`
-  color: ${({ theme }) => theme.colors.text};
-  font-size: 18px;
-  font-family: ${({ theme }) => theme.fonts.QuicksandRegular};
-`;
+export const CreateAccountText = styled(Text)``;
